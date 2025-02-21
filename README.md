@@ -38,6 +38,16 @@ The Download is Available with or without node.
 | With Node js Bundled    | [Download 19.3MB](https://github.com/iamvkr/wifi-share/raw/refs/heads/main/BuildSrc/wifi-share%20setup.exe) | Use if node js is not installed on your system     |
 | Without Node            | [Download 2.87MB](https://github.com/iamvkr/wifi-share/raw/refs/heads/main/BuildMin/wifi-share%20setup.exe) | Use if node js is already installed on your system |
 
+## The problem:
+Most of the time we want to transfer some messages from my phone to pc or the other way, but we either have to use some chat app like WhatsApp on web and phone which uses internet.
+Or, for file transfer we need USB cables.
+
+To solve the above problem, I wanted to build a product that solves this issue. So I used AI to get an action plan ready and implemented using JavaScript.
+
+The transfer takes place through local wifi network and without using internet.
+
+It uses technology like node js and express to create a local server and socket I.O for real-time connection.
+
 ### Development & Build
 
 Development and Build instruction are available at:
@@ -62,6 +72,14 @@ Development and Build instruction are available at:
 - The transfer of files and messeges takes place via `http` protocol. Make sure you are on a `private` or a `trusted` wifi Network.
 
 ### Screenshots
+
+<!-- ![Dashboard](/repoImage/screenshot1.png) -->
+
+<img src="repoImage/screenshot1.png" height="400px">
+
+<img src="repoImage/allow%20access.png" height="300px">
+
+<!-- ![Dashboard](/repoImage/allow%20access.png) -->
 
 ## Contributing
 

@@ -12,7 +12,7 @@
 #define MyAppIcoName "wifi_icon.ico"
 
 ; /*** IMPORTANT: Set your project root path here: ***/
-#define BasePath "C:\Users\visha\Desktop\Projects\local-share-shadcn\BuildMin"
+#define BasePath "C:\Users\x\x\x...\BuildMin"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
