@@ -11,17 +11,17 @@ const ChatBox = ({ messages }) => {
     const handleDownloadFile = async (fileData) => {
         const { fileName } = fileData;
         let Url = getOrigin();
-        const res = await fetch(Url + "/uploads/" + fileName);
-        if (!res.ok) {
-            return false;
-        }
-        const blob = await res.blob();
-        const url = URL.createObjectURL(blob);
+        // const res = await fetch(Url + "/uploads/" + fileName);
+        // if (!res.ok) {
+        //     return false;
+        // }
+        // const blob = await res.blob();
+        // const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-        link.href = url;
+        link.href = Url + "/download/" + fileName;
         link.download = fileData.fileName.substring(fileData.fileName.indexOf("-") + 1);
         link.click();
-        URL.revokeObjectURL(url);
+        URL.revokeObjectURL(Url + "/uploads/" + fileName);
     }
     return (
         <div className='h-[calc(100vh_-_15rem)] overflow-y-auto'>

@@ -20,6 +20,19 @@ app.use('/', hostRoutes, express.static(path.join(rootDir, 'public')));
 app.use('/client', clientRoutes);
 // File upload route
 app.use("/upload-file",uploadRoutes);
+app.get('/download/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(rootDir, 'public/uploads', filename);
+  
+    res.download(filePath, filename, (err) => { //Use res.download for simplicity.
+      if (err) {
+        console.error('Download error:', err);
+        if (!res.headersSent) {
+          res.status(500).send('Internal Server Error');
+        }
+      }
+    });
+  });
 
 const server = http.createServer(app);
 const io = new Server(server, {
