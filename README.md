@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="BuildSrc/imgAssets/wifi.png" width="100px" height="100px">
+  <img src="public/wifiShare.ico" width="100px" height="100px">
 </p>
 
 <div align="center">
@@ -11,10 +11,17 @@
 <img src="https://img.shields.io/badge/version-v1.0.0-blue">
 <img src="https://img.shields.io/badge/node-v.20+-brightgreen" alt="license" />
 <a href="https://opensource.org/licenses/"><img src="https://img.shields.io/badge/License-GPL%20v3-green.svg" alt="license" /></a>
-
 </p>
 
-<br />
+<p align="center">
+<img src="https://img.shields.io/badge/vite--express-black?logo=vite">
+<img src="https://img.shields.io/badge/node-black?logo=nodedotjs">
+<img src="https://img.shields.io/badge/express-black?logo=express">
+<img src="https://img.shields.io/badge/socket.io-black?logo=socketdotio">
+<img src="https://img.shields.io/badge/tailwindcss-black?logo=tailwindcss">
+<img src="https://img.shields.io/badge/shadcnui-black?logo=shadcnui">
+</p>
+
 <br />
 
 ## Features
@@ -26,17 +33,17 @@
 
 ## Prerequisite to Download wifi-share
 
-- [Edge Browser](https://www.microsoft.com/en-us/edge/?ch=1&form=MA13FJ) (installed on your system)
-- [Node js](https://nodejs.org/en) (optional)
+- [Edge Browser](https://www.microsoft.com/en-us/edge/?ch=1&form=MA13FJ) (usually pre installed on your system)
+- [Node js](https://nodejs.org/en) (require v20+)
 
 ## Download
 
 The Download is Available with or without node.
 
-| Download                | Windows 10+                                  | Description             |
-|-------------------------|----------------------------------------------|-------------------------|
-| With Node js Bundled    | [Download 19.3MB](https://github.com/iamvkr/wifi-share/raw/refs/heads/main/BuildSrc/wifi-share%20setup.exe) | Use if node js is not installed on your system     |
-| Without Node            | [Download 2.87MB](https://github.com/iamvkr/wifi-share/raw/refs/heads/main/BuildMin/wifi-share%20setup.exe) | Use if node js is already installed on your system |
+| Download for Windows 10+ 64-bit              | Description             |
+|----------------------------------------------|-------------------------|
+| [Download 1.94 MB](https://github.com/iamvkr/wifi-share/raw/refs/heads/main/Export/wifi-share%20setup.exe) | Setup installer for Wifi Share     |
+
 
 ## The problem:
 Most of the time we want to transfer some messages from my phone to pc or the other way, but we either have to use some chat app like WhatsApp on web and phone which uses internet.
@@ -48,22 +55,14 @@ The transfer takes place through local wifi network and without using internet.
 
 It uses technology like node js and express to create a local server and socket I.O for real-time connection.
 
-### Development & Build
-
-Development and Build instruction are available at:
-- [Frontend](/Frontend/README.md)
-- [Backend](/Backend/README.md)
-- [Build-Bundled](/BuildSrc/README.md)
-- [Build-Min](/BuildMin/README.md)
-
 ## Usage
 
 1. Connect your devices with wifi and hotspot.
+2. Open the app. The required modules are downloaded.
+3. Server starts and app is initialized.
 2. Click start button to start Host
-3. On Client device, Scan the QR code or type the client url in client device
-4. Enter the pin provided by host.
-5. Click on connect to connect to Host
-6. Now you can easily transfer files and messages.
+3. On Client device, Scan the QR code or type the client url in client device to connect to Host.
+4. Now you can easily transfer files and messages.
 
 #### Note:
 
@@ -71,15 +70,52 @@ Development and Build instruction are available at:
 
 - The transfer of files and messeges takes place via `http` protocol. Make sure you are on a `private` or a `trusted` wifi Network.
 
+## Development & Build
+
+The tech stack to build this app: 
+- [Vite-Express](https://www.npmjs.com/package/vite-express): (for development) With vite-express you can just start writing full-stack app in seconds.
+- Inno setup : Package app as an executable.
+
+### Tech Stack
+
+
+
+
+### Instructions:
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Note:set the configuration in  `src/client/config/conf.js`
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+Build for production
+
+```bash
+  npm run build
+```
+## Build
+
+- Make sure to run build command before packing.
+- Open the `wifi-share-build-script-min.iss` in inno steup.
+- Make required changes
+- Compile the project
+- A setup will be genetated which will install the wifi-share software.
+
+
+
 ### Screenshots
 
-<!-- ![Dashboard](/repoImage/screenshot1.png) -->
+<img src="screenshot.png" height="400px">
 
-<img src="repoImage/screenshot1.png" height="400px">
-
-<img src="repoImage/allow%20access.png" height="300px">
-
-<!-- ![Dashboard](/repoImage/allow%20access.png) -->
 
 ## Contributing
 
